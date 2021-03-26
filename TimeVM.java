@@ -40,10 +40,19 @@ public class TimeVM{
     }
 
     public String getFormattedTime(){
-        String zz = "AM";
+        String zz = "";
         int zHours;
-        if (hours < 13){
+        if(hours == 0){
+            zHours = 12;
+            zz = "AM";
+        }
+        if (hours == 12){
+            zHours = 12;
+            zz = "PM";
+        }
+        else if (hours < 13){
             zHours = hours;
+            zz = "AM";
         }
         else{
             zHours = hours - 12;
