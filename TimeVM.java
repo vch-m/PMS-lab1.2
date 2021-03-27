@@ -46,7 +46,7 @@ public class TimeVM{
             zHours = 12;
             zz = "AM";
         }
-        if (hours == 12){
+        else if (hours == 12){
             zHours = 12;
             zz = "PM";
         }
@@ -69,7 +69,7 @@ public class TimeVM{
         }
         return s;
     }
-    public TimeVM Add(TimeVM a, TimeVM b){
+    public static TimeVM Add(TimeVM a, TimeVM b){
         int s = a.seconds + b.seconds;
         int m = a.minutes + b.minutes;
         int h = a.hours + b.hours;
@@ -93,7 +93,7 @@ public class TimeVM{
         return Add(this, a);
     }
 
-    public TimeVM Subtract(TimeVM a, TimeVM b){
+    public static TimeVM Subtract(TimeVM a, TimeVM b){
         int s = a.seconds - b.seconds;
         int m = a.minutes - b.minutes;
         int h = a.hours - b.hours;

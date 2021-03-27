@@ -18,8 +18,7 @@ public class Main {
         TimeVM diff = value.Subtract(value3);
         System.out.println("Результат №6.c: " + diff.getFormattedTime());
 
-        TimeVM value4 = new TimeVM(2, 23, 59);
-        TimeVM sum2 = value.Add(value, value2);
+        TimeVM sum2 = TimeVM.Add(value, value2);
         System.out.println("Результат №7.a: " + sum2.getFormattedTime());
 
         TimeVM value5 = new TimeVM(2, 23, 59);
